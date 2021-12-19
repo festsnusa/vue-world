@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col md="4" sm="12" xs="12">
+      <v-col>
         <v-text-field
           label="Search"
           v-model="search"
@@ -12,8 +12,8 @@
         >
         </v-text-field
       ></v-col>
-      <v-spacer></v-spacer>
-      <v-col md="3" sm="12" xs="12">
+      <v-spacer class="d-none d-md-flex d-lg-flex"></v-spacer>
+      <v-col>
         <v-select
           v-model="region"
           @change="regionChange"
