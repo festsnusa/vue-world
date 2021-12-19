@@ -2,7 +2,7 @@
   <v-container>
     <v-row
       ><v-col
-        ><v-btn color="white" class="btn" @click="goBack"
+        ><v-btn class="btn" @click="goBack"
           ><v-icon>mdi-arrow-left</v-icon> Back</v-btn
         ></v-col
       ></v-row

@@ -1,16 +1,29 @@
 <template>
-  <v-app-bar app color="white">
+  <v-app-bar app>
     <div class="d-flex align-center"><h2>Where in the world?</h2></div>
     <v-spacer></v-spacer>
-    <v-btn text>
-      <font-awesome-icon icon="fa-solid fa-moon" size="lg" />
-      <span class="mr-2"> Dark Mode</span>
+    <v-btn text @click="darkMode">
+      <font-awesome-icon
+        v-if="$vuetify.theme.dark"
+        icon="fa-solid fa-sun"
+        size="lg"
+      />
+      <font-awesome-icon v-else icon="fa-solid fa-moon" size="lg" />
+      <span class="ml-2">
+        {{ $vuetify.theme.dark ? "Ligh Mode" : "Dark Mode" }}</span
+      >
     </v-btn>
   </v-app-bar>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    darkMode() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },
+  },
+};
 </script>
 
 <style>
