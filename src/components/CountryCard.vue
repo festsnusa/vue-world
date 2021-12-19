@@ -1,13 +1,13 @@
 <template>
-  <div class="card">
-    <div><img :src="flag" :alt="name" height="200" /></div>
-    <div class="card_content">
+  <v-card class="card">
+    <v-img height="200" :src="flag"></v-img>
+    <v-card-text class="card_content">
       <div class="card_title">{{ name }}</div>
       <div><b>Population: </b>{{ population | numberFormatter }}</div>
       <div><b>Region: </b>{{ region }}</div>
       <div><b>Capital: </b>{{ capital }}</div>
-    </div>
-  </div>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
@@ -23,18 +23,6 @@ export default {
 </script>
 
 <style>
-.card {
-  width: 300px;
-  margin-top: 30px;
-  border-radius: 4px;
-  -webkit-box-shadow: -3px 0px 27px -10px rgba(0, 0, 0, 0.37);
-  box-shadow: -3px 0px 27px -10px rgba(0, 0, 0, 0.37);
-}
-.card_content {
-  padding: 20px;
-  font-size: 14px;
-  font-weight: 300;
-}
 .card_title {
   font-weight: bold;
   font-size: 16px;

@@ -1,10 +1,14 @@
 <template>
-  <nav class="navbar">
-    <div class="title">Where in the world?</div>
-    <div class="mode-toggle">
-      <font-awesome-icon icon="fa-solid fa-moon" size="lg" /> Dark Mode
-    </div>
-  </nav>
+  <v-app-bar app color="white">
+    <div class="d-flex align-center">Where in the world?</div>
+
+    <v-spacer></v-spacer>
+
+    <v-btn text>
+      <font-awesome-icon icon="fa-solid fa-moon" size="lg" />
+      <span class="mr-2"> Dark Mode</span>
+    </v-btn>
+  </v-app-bar>
 </template>
 
 <script>

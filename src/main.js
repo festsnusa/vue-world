@@ -6,6 +6,7 @@ import "./utils/filter";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false;
 
@@ -25,5 +26,6 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 new Vue({
   router,
-  render: (h) => h(App),
+  vuetify,
+  render: (h) => h(App)
 }).$mount("#app");

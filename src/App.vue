@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
+  <v-app>
     <nav-bar></nav-bar>
-    <main>
+    <v-main>
       <router-view />
-    </main>
-  </div>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
@@ -14,17 +14,8 @@ export default {
   components: {
     "nav-bar": NavBar,
   },
+  data: () => ({
+    //
+  }),
 };
 </script>
-
-<style>
-body {
-  font-family: "Nunito Sans", sans-serif;
-  padding: 0;
-  margin: 0;
-}
-main {
-  margin-top: 100px;
-  padding: 0 5%;
-}
-</style>

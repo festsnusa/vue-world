@@ -1,21 +1,18 @@
 <template>
-  <div
-    style="
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      flex-wrap: wrap;
-    "
-  >
-    <div v-for="country in countries" :key="country.alpha3Code">
-      <country-card v-bind="country"></country-card>
-    </div>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col v-for="country in countries" :key="country.alpha3Code" md="4">
+        <country-card v-bind="country"></country-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 import CountryCard from "../components/CountryCard.vue";
+
 export default {
+  name: "Home",
   components: {
     "country-card": CountryCard,
   },
@@ -38,6 +35,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
