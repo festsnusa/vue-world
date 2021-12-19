@@ -1,16 +1,29 @@
 <template>
   <div id="app">
-    <router-view />
+    <nav-bar></nav-bar>
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
+import NavBar from "./components/NavBar.vue";
 export default {
   name: "App",
-  // components: {
-  // },
+  components: {
+    "nav-bar": NavBar,
+  },
 };
 </script>
 
 <style>
+body {
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+main {
+  margin-top: 30px;
+}
 </style>

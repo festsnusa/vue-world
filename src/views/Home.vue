@@ -1,11 +1,8 @@
 <template>
   <div>
-    <header>Where in the world</header>
-    <main>
-      <div v-for="country in countries" :key="country.alpha3Code">
-        {{ country.name }}
-      </div>
-    </main>
+    <div v-for="country in countries" :key="country.alpha3Code">
+      {{ country.name }}
+    </div>
   </div>
 </template>
 
