@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import axios from "axios";
 import router from "./router";
+import "./utils/filter";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";

@@ -24,6 +24,7 @@ body {
   margin: 0;
 }
 main {
-  margin-top: 30px;
+  margin-top: 100px;
+  padding: 0 5%;
 }
 </style>

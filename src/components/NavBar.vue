@@ -29,5 +29,6 @@ export default {};
 }
 .title {
   font-weight: 800;
+  font-size: 3vh;
 }
 </style>
