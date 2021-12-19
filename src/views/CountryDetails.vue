@@ -2,7 +2,7 @@
   <v-container>
     <v-row
       ><v-col
-        ><v-btn color="white" class="btn"
+        ><v-btn color="white" class="btn" @click="goBack"
           ><v-icon>mdi-arrow-left</v-icon> Back</v-btn
         ></v-col
       ></v-row
@@ -19,28 +19,46 @@
             </v-col>
             <v-col md="6">
               <div>
-                <b>Native Name: </b>{{ country.population | numberFormatter }}
+                <b>Native Name: </b
+                >{{ country.nativeName ? country.nativeName : "NA" }}
               </div>
               <div>
                 <b>Population: </b>{{ country.population | numberFormatter }}
               </div>
               <div><b>Region: </b>{{ country.region }}</div>
-              <div><b>Sub Region: </b>{{ country.region }}</div>
+              <div><b>Sub Region: </b>{{ country.subregion }}</div>
               <div><b>Capital: </b>{{ country.capital }}</div>
             </v-col>
             <v-col md="6">
               <div>
                 <b>Top Level Domain: </b
-                >{{ country.population | numberFormatter }}
+                ><span v-for="domain in country.topLevelDomain" :key="domain">{{
+                  domain
+                }}</span>
               </div>
               <div>
-                <b>Currencies: </b>{{ country.population | numberFormatter }}
+                <b>Currencies: </b
+                ><span
+                  v-for="currency in country.currencies"
+                  :key="currency.code"
+                  >{{ country.name }}</span
+                >
               </div>
               <div><b>Languages: </b>{{ country.region }}</div>
             </v-col>
             <v-col md="12">
-              Border Countries:
-              <div clas></div>
+              <div class="mr-1">
+                Border Countries:
+                <span>
+                  <v-btn
+                    class="mr-2 mb-2"
+                    v-for="border in country.borders"
+                    @click="getBorder(border)"
+                    :key="border"
+                    >{{ border }}</v-btn
+                  >
+                </span>
+              </div>
             </v-col>
           </v-row>
         </div>
@@ -80,6 +98,15 @@ export default {
         .catch((error) => {
           console.log(error);
         });
+    },
+    goBack() {
+      this.$router.push({
+        name: "Home",
+      });
+    },
+    getBorder(border) {
+      this.code = border;
+      this.getCountryDetails();
     },
   },
 };
