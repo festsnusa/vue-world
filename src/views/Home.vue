@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col md="4">
+      <v-col md="4" sm="12" xs="12">
         <v-text-field
           label="Search"
           v-model="search"
@@ -13,7 +13,7 @@
         </v-text-field
       ></v-col>
       <v-spacer></v-spacer>
-      <v-col md="3">
+      <v-col md="3" sm="12" xs="12">
         <v-select
           v-model="region"
           @change="regionChange"
