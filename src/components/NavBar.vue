@@ -1,9 +1,7 @@
 <template>
   <v-app-bar app color="white">
-    <div class="d-flex align-center">Where in the world?</div>
-
+    <div class="d-flex align-center"><h2>Where in the world?</h2></div>
     <v-spacer></v-spacer>
-
     <v-btn text>
       <font-awesome-icon icon="fa-solid fa-moon" size="lg" />
       <span class="mr-2"> Dark Mode</span>

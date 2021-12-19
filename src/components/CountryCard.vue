@@ -1,7 +1,7 @@
 <template>
-  <v-card class="card">
+  <v-card @click="gotoDetails">
     <v-img height="200" :src="flag"></v-img>
-    <v-card-text class="card_content">
+    <v-card-text>
       <div class="card_title">{{ name }}</div>
       <div><b>Population: </b>{{ population | numberFormatter }}</div>
       <div><b>Region: </b>{{ region }}</div>
@@ -18,6 +18,15 @@ export default {
     population: { type: Number, default: 0 },
     region: { type: String, default: "NA" },
     capital: { type: String, default: "NA" },
+    alpha3Code: { type: String, default: "NA" },
+  },
+  methods: {
+    gotoDetails() {
+      this.$router.push({
+        name: "Details",
+        params: { code: btoa(this.alpha3Code) },
+      });
+    },
   },
 };
 </script>

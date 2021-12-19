@@ -23,7 +23,7 @@ const routes = [
   },
   {
     name: "Details",
-    path: "/details",
+    path: "/details/:code",
     component: CountryDetails,
     meta: {
       item: null,
