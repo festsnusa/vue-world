@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div>Abu Dhabi Police</div>
+    <router-view />
   </div>
 </template>
 
